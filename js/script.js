@@ -1,6 +1,5 @@
 const chart = document.getElementById('chart').getContext('2d')
 
-// create a new chart instance
 new Chart(chart, {
     type: 'line',
     data: {
@@ -33,17 +32,16 @@ new Chart(chart, {
 })
 
 
-
 const menuBtn = document.querySelector('#menu-btn');
 const closeBtn = document.querySelector('#close-btn');
 const sidebar = document.querySelector('aside');
 
 menuBtn.addEventListener('click', () => {
-    sidebar.style.display = 'block';
+    sidebar.style = `left: 0`;
 })
 
 closeBtn.addEventListener('click', () => {
-    sidebar.style.display = 'none';
+    sidebar.style = `left:-100%`;
 })
 
 
@@ -56,7 +54,6 @@ themeBtn.addEventListener('click', () => {
     themeBtn.querySelector('span:first-child').classList.toggle('active')
     themeBtn.querySelector('span:last-child').classList.toggle('active')
 })
-
 
 
 

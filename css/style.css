@@ -32,11 +32,21 @@
     --color-gray-dark: #adacb5;
 }
 
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--color-dark);
+    border-radius: 20px 0 0 20px;
+}
+
 * {
     margin: 0;
     padding: 0;
     appearance: 0;
     box-sizing: border-box;
+    font-family: poppins, sans-serif ;
 }
 
 ul,
@@ -61,7 +71,7 @@ html {
 
 body {
     background: var(--color-light);
-    font-family: poppins, sans-serif;
+    font-family: poppins, sans-serif ;
     min-height: 100vh;
     color: var(--color-dark);
 }
@@ -132,19 +142,16 @@ small {
 .bg-danger {
     background: var(--color-danger);
     box-shadow: 0 8px 8px var(--color-danger-light);
-
 }
 
 .bg-success {
     background: var(--color-success);
     box-shadow: 0 8px 8px var(--color-success-light);
-
 }
 
 .bg-purple {
     background: var(--color-purple);
     box-shadow: 0 8px 8px var(--color-purple-light);
-
 }
 
 .bg-purple-light {
@@ -169,6 +176,7 @@ small {
 }
 
 /* ============ Nav Bar ============ */
+
 nav {
     background: var(--color-white);
     padding: 10px 0;
@@ -183,8 +191,11 @@ nav .container {
     margin: 0 auto;
 }
 
-nav img.logo {
+nav .logo {
     width: 70px;
+    color: var(--color-black);
+    font-size: 18px;
+    font-weight: 700;
 }
 
 nav .search-bar {
@@ -251,7 +262,8 @@ nav .profile-area .profile-photo {
     display: block;
     width: 30px;
     height: 30px;
-    border-radius: 50%;
+    border: 2px solid var(--color-dark);
+    border-radius: 5px;
     overflow: hidden;
 }
 
@@ -368,7 +380,7 @@ main section.middle .header input[type='date'] {
     padding: 5px 20px;
     border-radius: var(--border-radius-2);
     background: var(--color-white);
-    color: var(--color-gray-dark);
+    color: var(--color-dark);
 }
 
 main section.middle .cards {
@@ -454,8 +466,6 @@ main section.middle .card .bottom .right {
     gap: 20px;
 }
 
-
-
 /* =============== Monthely report =============== */
 
 main .monthly-report {
@@ -470,7 +480,6 @@ main .monthly-report .report h1 {
     font-weight: 700;
     font-size: 18px;
 }
-
 
 /* =============== Fast Payment =============== */
 
@@ -516,7 +525,7 @@ main .fast-payment .badge:first-child span {
     justify-content: center;
     height: fit-content;
     font-size: 15px;
-} 
+}
 
 main .fast-payment .badge div {
     display: flex;
@@ -539,7 +548,6 @@ canvas {
 main section.right .investments {
     background: var(--color-white);
     border-radius: var(--card-border-radius);
-
 }
 
 main section.right .investments img {
@@ -552,14 +560,12 @@ main section.right .investments .header {
     align-items: center;
     padding: var(--card-padding);
     padding-bottom: 0;
-
 }
 
 main section.right .investments .header a {
     display: flex;
     align-items: center;
     color: var(--color-primary);
-
 }
 
 main section.right .investments .investment {
@@ -571,10 +577,10 @@ main section.right .investments .investment {
     transition: all 300ms ease;
 }
 
-main section.right .investments .investment:last-child{
+main section.right .investments .investment:last-child {
     border: none;
-
 }
+
 main section.right .investments .investment:hover {
     background: var(--color-light);
     cursor: pointer;
@@ -582,14 +588,12 @@ main section.right .investments .investment:hover {
 
 /* transactions */
 
-main  .recent-transactions {
+main .recent-transactions {
     margin-top: 20px;
-
 }
 
 main .recent-transactions img {
     width: 22px;
-
 }
 
 main .recent-transactions .header {
@@ -601,7 +605,7 @@ main .recent-transactions .header {
 main .recent-transactions .header a {
     display: flex;
     align-items: center;
-    color: var(--color-primary) ;
+    color: var(--color-primary);
 }
 
 main .recent-transactions .transaction {
@@ -655,32 +659,27 @@ main .recent-transactions .card-details .card {
     nav .profile-area {
         gap: 20px;
     }
+
     nav .profile-area button#menu-btn {
         display: inline;
         background: transparent;
         color: var(--color-dark);
     }
-    main{
+
+    main {
         grid-template-columns: 1fr;
     }
 
     main aside {
         position: fixed;
         top: 0;
-        left: -100%;
+        left: -200%;
         z-index: 3;
         background: var(--color-white);
         width: 220px;
         height: 100vh;
         box-shadow: 20px 0 20px var(--color-primary-light);
-        display: none;
-        animation: showSidebar 500ms ease forwards;
-    }
-
-    @keyframes showSidebar {
-        to{
-            left: 0;
-        }
+        transition: 300ms ease;
     }
 
     main aside button#close-btn {
@@ -694,6 +693,7 @@ main .recent-transactions .card-details .card {
         background: transparent;
         color: var(--color-dark);
     }
+
     button:hover {
         cursor: pointer;
     }
@@ -709,6 +709,7 @@ main .recent-transactions .card-details .card {
     main section.middle .cards {
         grid-template-columns: 1fr 1fr;
     }
+
     main canvas {
         margin: 30px 0 10px;
     }
@@ -739,24 +740,6 @@ main .recent-transactions .card-details .card {
         align-items: flex-start;
         margin-top: 30px;
         gap: 14px;
-
     }
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
